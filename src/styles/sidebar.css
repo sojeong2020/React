@@ -1,0 +1,10 @@
+.sidebar {
+    display: flex; 
+    flex: 1 auto;
+    min-height:100vh;
+    overflow: scroll initial;
+    position:initial;
+}
+.sidebar-item :hover{
+background-color: rgb(4, 51, 14);
+}
