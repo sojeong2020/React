@@ -17,7 +17,7 @@ const SideBar = () => {
       <CDBSidebar>
         <CDBSidebarHeader prefix={<i className="fa fa-bars" />}></CDBSidebarHeader>
         <CDBSidebarHeader>
-        <img src={mini} alt="profile" className='img-thumbnail rounded-circle'/>
+        <img src={mini} alt="profile" className='img-thumbnail rounded-circle' size="sm"/>
         </CDBSidebarHeader>
 
         <CDBSidebarContent  className="sidebar-content">
