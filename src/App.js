@@ -13,7 +13,7 @@ import Footer from './components/Footer';
 
 import {useState} from 'react';
 
-import { Col, Row ,Button} from 'react-bootstrap';
+import { Col, Row ,Button, Nav,Navbar, Container} from 'react-bootstrap';
 
 
 function App() {
@@ -28,25 +28,38 @@ function App() {
 
   return (
     <>
-   <Row>
-        <Col>
-          <div className="header">
-            <div className="lan-button">
+   <Navbar bg="light" expand="lg">
+  <Container fluid>
+    <Navbar.Brand href="#">My App</Navbar.Brand>
+    <Navbar.Toggle aria-controls="navbarScroll" />
+    <Navbar.Collapse id="navbarScroll">
+      <Nav
+        className="ms-auto my-2 my-lg-0"
+        style={{ maxHeight: '100px' }}
+        navbarScroll
+      >
+        <Nav.Link href="/">Home</Nav.Link>
+        <Nav.Link href="https://teamkinetic.co.uk/about-teamkinetic">About us</Nav.Link>
 
-            <Button className="lan-button-en" 
-            variant="outline-danger"
-            onClick={()=>handleClick('en')}
-            >English</Button>
+        <div className="lan-button">
 
-            <Button variant="outline-info"
-            onClick={()=>handleClick('we')}
-            >Welsh</Button>
+        <Button className="lan-button-en" 
+         variant="outline-danger"
+         onClick={()=>handleClick('en')}
+        >English</Button>
 
-          </div>
-        </div> 
+        <Button variant="outline-info"
+        onClick={()=>handleClick('we')}
+        >Welsh</Button>
 
-        </Col>
-      </Row>
+        </div>
+        
+      </Nav>
+      
+       
+    </Navbar.Collapse>
+  </Container>
+</Navbar>
    
   <div className="content-div">   
   <SideBar />
