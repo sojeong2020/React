@@ -1,0 +1,33 @@
+h4{
+    margin-left: 23px;
+}
+.content {
+    padding:7px;
+}
+
+.card-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-img {
+    
+    height: 20vw;
+    object-fit: cover; 
+}
+
+.card-text {
+    height:100%;
+    padding: 30px 7px 7px 7px;
+}
+
+.card-footer {
+    font-size: 1rem;
+    text-align: right;
+    padding: 5px;
+}
+
+.card-row {
+    margin-top: 10px;
+}
