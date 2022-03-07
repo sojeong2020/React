@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/sidebar.css';
 import { NavLink } from 'react-router-dom';
+import mini from '../images/mini.jpg'
 
 import {
   CDBSidebar,
@@ -14,7 +15,11 @@ const SideBar = () => {
   return (
     <div className="sidebar">
       <CDBSidebar>
-        <CDBSidebarHeader prefix={<i className="fa fa-bars" />}>React App</CDBSidebarHeader>
+        <CDBSidebarHeader prefix={<i className="fa fa-bars" />}></CDBSidebarHeader>
+        <CDBSidebarHeader>
+        <img src={mini} alt="profile" className='img-thumbnail rounded-circle'/>
+        </CDBSidebarHeader>
+
         <CDBSidebarContent  className="sidebar-content">
           <CDBSidebarMenu>
             <NavLink exact="true" to="/" activeclassname="activeClicked">
