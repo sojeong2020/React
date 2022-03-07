@@ -1,6 +1,7 @@
 import React from 'react';
+import '../styles/profile.css';
 import { useState } from 'react';
-import { Form, Button, Col, Row , InputGroup} from 'react-bootstrap';
+import { Container, Row, Col} from 'react-bootstrap';
 
 
 const Profile = () => {
@@ -22,39 +23,54 @@ const Profile = () => {
         e.preventDefault()
         console.log("all data from form", firstname,surname,mobile,email,date,gender)
 
-        firstname.match(/^[A-Za-z0-9]{3,16}$/)? setFirstnameMsg("Looks good!"):setFirstnameMsg("Username should be 3-16 characters and shouldn't include any special character!")
-        surname.match(/^[A-Za-z0-9]{1,16}$/)? setSurnameMsg("Looks good!"):setSurnameMsg("Username should be 1-16 characters and shouldn't include any special character!")
+        firstname.match(/^[A-Za-z]{2,16}$/)? setFirstnameMsg("Looks good!"):setFirstnameMsg("Firstname should be 2-16 characters and shouldn't include any special character!")
+        surname.match(/^[A-Za-z]{2,16}$/)? setSurnameMsg("Looks good!"):setSurnameMsg("Surname should be 2-16 characters and shouldn't include any special character!")
         mobile.match(/^((\\+91-?)|0)?[0-9]{10}$/)? setMobileMsg("Looks good!"):setMobileMsg("It should be a valid mobile number!")
-        email.match(/^((\\+91-?)|0)?[0-9]{10}$/)? setEmailMsg("Looks good!"):setEmailMsg("It should be a valid email address!")
+        email.match(/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/)? setEmailMsg("Looks good!"):setEmailMsg("It should be a valid email address!")
     }
 
 
  return (
         <div>
-            <div>
-                <h1>Personal details</h1>
+            <Container>
+                
+            <div className='profile-form'>
                 <form onSubmit={submitForm}>
+                <h4>Personal details</h4>
+            <Row>
+                <Col  xs={12} md={6}>
                 <label>First name</label><br></br>
                 <input type="text" placeholder="First Name" onChange={(e) => setFirstname(e.target.value)} required/> <br></br>
-                <span>{firstnameMsg}</span> <br></br>
+                <span className='form-span'>{firstnameMsg}</span> <br></br>
+                </Col>
 
+                <Col xs={12} md={6}>
                 <label>Surname</label><br></br>
                 <input type="text" placeholder="Surname" onChange={(e) => setSurname(e.target.value)}  required /> <br></br>
-                <span>{surnameMsg}</span> <br></br>
+                <span className='form-span'>{surnameMsg}</span> <br></br>
+                </Col>
+            </Row>
 
+            <Row>
+                <Col  xs={12} md={6}>
                 <label>Your mobile number</label><br></br>
                 <input type="text" placeholder="Mobile number" onChange={(e) => setMobile(e.target.value)}  required /> <br></br>
-                <span>{mobileMsg}</span> <br></br>
-
+                <span className='form-span'>{mobileMsg}</span> <br></br>
+                </Col>
+                <Col  xs={12} md={6}>
                 <label>Your email address</label><br></br>
                 <input type="text" placeholder="Email address" onChange={(e) => setEmail(e.target.value)}  required /> <br></br>
-                <span>{emailMsg}</span> <br></br>
+                <span className='form-span'>{emailMsg}</span> <br></br>
+                </Col>
+            </Row>
 
+            <Row>
+                 <Col  xs={12} md={6}>
                 <label>Your date of birth</label><br></br>
                 <input type="date" placeholder="Date" onChange={(e) => setDate(e.target.value)} required/> <br></br>
-
+                 </Col>
+                 <Col  xs={12} md={6}>
                 <label>You identify your gender as</label><br></br>
-
                 <select onChange={(e) => setGender(e.target.value)} required>
                     <option value="">Options</option>
                     <option value="male">Male</option>
@@ -62,10 +78,12 @@ const Profile = () => {
                     <option value="transmale">Trans Male</option>
                     <option value="transfemale">Trans Female</option>
                 </select><br></br>
-
-                <Button type="submit">Submit</Button>
+                </Col>
+            </Row>
+                <button type="submit">Submit</button>
              </form>
             </div>
+            </Container>
     </div>
     );
 };
