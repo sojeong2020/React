@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { Container, Row, Col} from 'react-bootstrap';
 
 
-const Profile = () => {
+const Profile = ({t}) => {
 
     const [firstname, setFirstname]=useState("")
     const [surname, setSurname]=useState("")
@@ -36,43 +36,43 @@ const Profile = () => {
                 
             <div className='profile-form'>
                 <form onSubmit={submitForm}>
-                <h4>Personal details</h4>
+                <h4>{t('profile.title')}</h4>
             <Row>
                 <Col  xs={12} md={6}>
-                <label>First name</label><br></br>
-                <input type="text" placeholder="First Name" onChange={(e) => setFirstname(e.target.value)} required/> <br></br>
+                <label>{t('profile.name')}</label><br></br>
+                <input type="text" placeholder={t('profile.name')} onChange={(e) => setFirstname(e.target.value)} required/> <br></br>
                 <span className='form-span'>{firstnameMsg}</span> <br></br>
                 </Col>
 
                 <Col xs={12} md={6}>
-                <label>Surname</label><br></br>
-                <input type="text" placeholder="Surname" onChange={(e) => setSurname(e.target.value)}  required /> <br></br>
+                <label>{t('profile.surname')}</label><br></br>
+                <input type="text" placeholder={t('profile.surname')} onChange={(e) => setSurname(e.target.value)}  required /> <br></br>
                 <span className='form-span'>{surnameMsg}</span> <br></br>
                 </Col>
             </Row>
 
             <Row>
                 <Col  xs={12} md={6}>
-                <label>Your mobile number</label><br></br>
-                <input type="text" placeholder="Mobile number" onChange={(e) => setMobile(e.target.value)}  required /> <br></br>
+                <label>{t('profile.mobile')}</label><br></br>
+                <input type="text" placeholder={t('profile.mobile')} onChange={(e) => setMobile(e.target.value)}  required /> <br></br>
                 <span className='form-span'>{mobileMsg}</span> <br></br>
                 </Col>
                 <Col  xs={12} md={6}>
-                <label>Your email address</label><br></br>
-                <input type="text" placeholder="Email address" onChange={(e) => setEmail(e.target.value)}  required /> <br></br>
+                <label>{t('profile.email')}</label><br></br>
+                <input type="text" placeholder={t('profile.email')} onChange={(e) => setEmail(e.target.value)}  required /> <br></br>
                 <span className='form-span'>{emailMsg}</span> <br></br>
                 </Col>
             </Row>
 
             <Row>
                  <Col  xs={12} md={6}>
-                <label>Your date of birth</label><br></br>
+                <label>{t('profile.bod')}</label><br></br>
                 <input type="date" placeholder="Date" onChange={(e) => setDate(e.target.value)} required/> <br></br>
                  </Col>
                  <Col  xs={12} md={6}>
-                <label>You identify your gender as</label><br></br>
+                <label>{t('profile.gender')}</label><br></br>
                 <select onChange={(e) => setGender(e.target.value)} required>
-                    <option value="">Options</option>
+                    <option value="">{t('profile.options')}</option>
                     <option value="male">Male</option>
                     <option value="female">Female</option>
                     <option value="transmale">Trans Male</option>
@@ -80,7 +80,7 @@ const Profile = () => {
                 </select><br></br>
                 </Col>
             </Row>
-                <button type="submit">Submit</button>
+                <button type="submit">{t('profile.button')}</button>
              </form>
             </div>
             </Container>

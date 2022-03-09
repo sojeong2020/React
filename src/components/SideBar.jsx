@@ -11,7 +11,7 @@ import {
   CDBSidebarMenuItem,
 } from 'cdbreact';
 
-const SideBar = () => {
+const SideBar = ({t}) => {
   return (
     <div className="sidebar">
       <CDBSidebar>
@@ -23,22 +23,22 @@ const SideBar = () => {
         <CDBSidebarContent  className="sidebar-content">
           <CDBSidebarMenu>
             <NavLink exact="true" to="/" activeclassname="activeClicked">
-            <CDBSidebarMenuItem className="sidebar-item" icon="th-large">Home</CDBSidebarMenuItem>
+            <CDBSidebarMenuItem className="sidebar-item" icon="th-large">{t('sidebar.home')}</CDBSidebarMenuItem>
             </NavLink>
             <NavLink exact="true" to="/profile" activeclassname="activeClicked">
-            <CDBSidebarMenuItem className="sidebar-item" icon="sticky-note">Profile</CDBSidebarMenuItem>
+            <CDBSidebarMenuItem className="sidebar-item" icon="sticky-note">{t('sidebar.profile')}</CDBSidebarMenuItem>
             </NavLink>
             <NavLink exact="true" to="/opps" activeclassname="activeClicked">
-            <CDBSidebarMenuItem className="sidebar-item" icon="columns">Opportunities</CDBSidebarMenuItem>
+            <CDBSidebarMenuItem className="sidebar-item" icon="columns">{t('sidebar.opps')}</CDBSidebarMenuItem>
             </NavLink>
             <NavLink exact="true" to="/roles" activeclassname="activeClicked">
-            <CDBSidebarMenuItem className="sidebar-item" icon="book">Roles</CDBSidebarMenuItem>
+            <CDBSidebarMenuItem className="sidebar-item" icon="book">{t('sidebar.roles')}</CDBSidebarMenuItem>
             </NavLink>
             <NavLink exact="true" to="/events" activeclassname="activeClicked">
-            <CDBSidebarMenuItem className="sidebar-item" icon="credit-card">Events</CDBSidebarMenuItem>
+            <CDBSidebarMenuItem className="sidebar-item" icon="credit-card">{t('sidebar.events')}</CDBSidebarMenuItem>
             </NavLink>
             <NavLink exact="true" to="/calendar" activeclassname="activeClicked">
-            <CDBSidebarMenuItem className="sidebar-item" icon="calendar">Calendar</CDBSidebarMenuItem>
+            <CDBSidebarMenuItem className="sidebar-item" icon="calendar">{t('sidebar.calendar')}</CDBSidebarMenuItem>
             </NavLink>
           </CDBSidebarMenu>
         </CDBSidebarContent>

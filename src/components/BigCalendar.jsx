@@ -43,7 +43,7 @@ const events = [
 
     
 
-const BigCalendar = () => {
+const BigCalendar = ({t}) => {
 
     const [newEvent, setNewEvent] = useState({ title: "", start: "", end: "" });
     const [allEvents, setAllEvents] = useState(events);
@@ -54,10 +54,10 @@ const BigCalendar = () => {
 
     return (
         <div className="big-calendar">
-           <h1>Calendar</h1>
+           <h1>{t('calendar.title')}</h1>
             
             <div className="add-event">
-                <h4>Add New Event</h4>
+                <h4>{t('calendar.add')}</h4>
                 <input type="text" placeholder="Add Title" style={{ width: "20%", marginRight: "10px" }} value={newEvent.title} onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })} />
                 <DatePicker placeholderText="Start Date" style={{ marginRight: "10px" }} selected={newEvent.start} onChange={(start) => setNewEvent({ ...newEvent, start })} />
                 <DatePicker placeholderText="End Date" selected={newEvent.end} onChange={(end) => setNewEvent({ ...newEvent, end })} />

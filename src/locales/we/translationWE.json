@@ -1,0 +1,72 @@
+{
+    "sidebar":{
+        "home":"Cartref",
+        "profile":"Proffil",
+        "opps":"Cyfleoedd",
+        "roles":"Roles",
+        "events":"Digwyddiadau",
+        "calendar":"calendr"
+    },
+    "navbar":{
+        "logo":"Ap Ymateb",
+        "home":"Cartref",
+        "about":"Amdanom ni",
+        "english":"Saesneg",
+        "welsh":"Cymraeg"
+    },
+    "home":{
+        "title":"Tasgau Cymunedol Covid 19",
+        "subtitle":"Chwilio am y tasgau cymunedol covid penodol?",
+        "link":"Agorwch yr app"
+    },
+    "profile":{
+        "title":"Manylion personol",
+        "name":"Enw cyntaf",
+        "surname":"Cyfenw",
+        "mobile":"Rhif ffôn Symudol",
+        "email":"Cyfeiriad ebost",
+        "bod":"Eich dyddiad geni",
+        "gender":"Rydych chi'n nodi eich rhyw fel",
+        "options":"Opsiynau",
+        "button":"Cyflwyno"
+    },
+    "opps":{
+        "title":"Rhestr Cyfleoedd"
+    },
+    "roles":{
+        "cardFirst":{
+            "title":"Rolau Arfyrddio Sylfaenol",
+            "p1":"Statws Presennol yn cael ei GYMERADWYO",
+            "p2":"2 Tasgau wedi'u cwblhau",
+            "p3":"0 Tasg wedi dechrau",
+            "p4":"2 tasgau yn yr arfaeth",
+            "more":"Mwy o fanylion",
+            "link":"Rôl Sylfaenol ar fwrdd"
+        },
+        "cardSecond":{
+            "title":">Rôl Sylfaenol",
+            "p1":"Statws Presennol yn cael ei GYMERADWYO",
+            "p2":"3 Tasgau wedi'u cwblhau",
+            "p3":"1 Tasg wedi dechrau",
+            "p4":"0 tasgau yn yr arfaeth",
+            "more":"Mwy o fanylion",
+            "link":"Rôl Sylfaenol"
+        }
+    },
+    "events":{
+        "title":"Digwyddiadau Presennol",
+        "one":"LLEOLIADAU HOSTEL",
+        "two":"DOFE GWIRFODDOLI RHEOLAIDD",
+        "three":"CYFLEOEDD RHEOLWR GWIRFODDOL",
+        "four":"PARTÏON GWAITH",
+        "five":"GWIRFODDOLI RHIFOL",
+        "six":"PRESWYLWYR AUR DOFE",
+        "more":"Mwy o fanylion"
+    },
+    "calendar":{
+        "title":"Calendr",
+        "add":"Ychwanegu Digwyddiad Newydd"
+
+    }
+    
+}

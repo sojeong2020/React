@@ -2,6 +2,8 @@ import './App.css';
 
 import { Routes, Route } from 'react-router-dom';
 
+import { useTranslation } from 'react-i18next';
+
 import SideBar from './components/SideBar';
 import Home from './components/Home';
 import Profile from './components/Profile';
@@ -19,11 +21,15 @@ import { Col, Row ,Button, Nav,Navbar, Container} from 'react-bootstrap';
 
 function App() {
 
+  const { t, i18n } = useTranslation();
+
   const [lang, setLang] =useState("");
   console.log(lang,"lang in App")
 
   function handleClick(lang){
+
     setLang(lang)
+    i18n.changeLanguage(lang);
   }
     
 
@@ -31,7 +37,7 @@ function App() {
     <>
    <Navbar bg="light" expand="lg">
   <Container fluid>
-    <Navbar.Brand href="/">React App</Navbar.Brand>
+    <Navbar.Brand href="/">{t('navbar.logo')}</Navbar.Brand>
     <Navbar.Toggle aria-controls="navbarScroll" />
     <Navbar.Collapse id="navbarScroll">
       <Nav
@@ -39,19 +45,19 @@ function App() {
         style={{ maxHeight: '100px' }}
         navbarScroll
       >
-        <Nav.Link href="/">Home</Nav.Link>
-        <Nav.Link href="https://teamkinetic.co.uk/about-teamkinetic">About us</Nav.Link>
+        <Nav.Link href="/">{t('navbar.home')}</Nav.Link>
+        <Nav.Link href="https://teamkinetic.co.uk/about-teamkinetic">{t('navbar.about')}</Nav.Link>
 
         <div className="lan-button">
 
         <Button className="lan-button-en" 
          variant="outline-danger"
          onClick={()=>handleClick('en')}
-        >English</Button>
+        >{t('navbar.english')}</Button>
 
         <Button variant="outline-info"
         onClick={()=>handleClick('we')}
-        >Welsh</Button>
+        >{t('navbar.welsh')}</Button>
 
         </div>
         
@@ -63,18 +69,18 @@ function App() {
 </Navbar>
    
   <div className="content-div">   
-  <SideBar />
+  <SideBar t={t} />
 
    
   <div className="content-margin">
     <Routes>
-      <Route exact path="/" element={<Home />} />
-      <Route exact path="/profile" element={<Profile />} />
-      <Route exact path="/opps" element={<Opps />} />
-      <Route exact path="/opp/:id" element={<OppDetail />} />
-      <Route exact path="/roles" element={<Roles />} />
-      <Route exact path="/events" element={<Events />} />
-      <Route exact path="/calendar" element={<BigCalendar />} />
+      <Route exact path="/" element={<Home t={t} />} />
+      <Route exact path="/profile" element={<Profile t={t} />} />
+      <Route exact path="/opps" element={<Opps t={t} />} />
+      <Route exact path="/opp/:id" element={<OppDetail t={t} />} />
+      <Route exact path="/roles" element={<Roles t={t} />} />
+      <Route exact path="/events" element={<Events t={t} />} />
+      <Route exact path="/calendar" element={<BigCalendar t={t} />} />
     </Routes> 
   </div>
   </div>   

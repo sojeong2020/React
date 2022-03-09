@@ -4,7 +4,7 @@ import { Card, Container, Row, Col} from 'react-bootstrap';
 
 
 
-const Roles = () => {
+const Roles = ({t}) => {
     return (
     <div>
         <Container>
@@ -12,15 +12,15 @@ const Roles = () => {
         <Col xs={12} md={6}>
         <Card>
         <Card.Body  className='card-body'>
-        <Card.Title className='title'>Basic Onboarding Roles</Card.Title>
+        <Card.Title className='title'>{t('roles.cardFirst.title')}</Card.Title>
         <Card.Text>
-            <p>Current Status is APPROVED</p>
-            <p>2 Completed tasks</p>
-            <p>0 Started task</p>
-            <p>2 pending taskd</p>
+            <p>{t('roles.cardFirst.p1')}</p>
+            <p>{t('roles.cardFirst.p2')}</p>
+            <p>{t('roles.cardFirst.p3')}</p>
+            <p>{t('roles.cardFirst.p4')}</p>
         </Card.Text>
-       <Card.Link href="/">More detail</Card.Link>
-       <Card.Link href="/">Basic Onboardinf Role</Card.Link>
+       <Card.Link href="/">{t('roles.cardFirst.more')}</Card.Link>
+       <Card.Link href="/">{t('roles.cardFirst.link')}</Card.Link>
        </Card.Body>
       
        </Card>
@@ -29,15 +29,15 @@ const Roles = () => {
        <Col xs={12} md={6}>
         <Card >
         <Card.Body  className='card-body'>
-        <Card.Title className='title'>Basic Roles</Card.Title>
+        <Card.Title className='title'>{t('roles.cardSecond.title')}</Card.Title>
         <Card.Text>
-            <p>Current Status is APPROVED</p>
-            <p>3 Completed tasks</p>
-            <p>1 Started task</p>
-            <p>0 pending taskd</p>
+            <p>{t('roles.cardSecond.p1')}</p>
+            <p>{t('roles.cardSecond.p2')}</p>
+            <p>{t('roles.cardSecond.p3')}</p>
+            <p>{t('roles.cardSecond.p4')}</p>
         </Card.Text>
-       <Card.Link href="/">More detail</Card.Link>
-       <Card.Link href="/">Basic Role</Card.Link>
+       <Card.Link href="/">{t('roles.cardSecond.more')}</Card.Link>
+       <Card.Link href="/">{t('roles.cardSecond.link')}</Card.Link>
       </Card.Body>
       </Card>
        </Col>

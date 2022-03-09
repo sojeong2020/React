@@ -1,0 +1,72 @@
+{
+    "sidebar":{
+        "home":"Home",
+        "profile":"Profile",
+        "opps":"Opportunities",
+        "roles":"Roles",
+        "events":"Events",
+        "calendar":"calendar"
+    },
+    "navbar":{
+        "logo":"React App",
+        "home":"Home",
+        "about":"About us",
+        "english":"English",
+        "welsh":"Welsh"
+    },
+    "home":{
+        "title":"Covid 19 Community Tasks",
+        "subtitle":" Looking for the covid specific community tasks?",
+        "link":"Open the app"
+    },
+    "profile":{
+        "title":"Personal details",
+        "name":"First name",
+        "surname":"Surname",
+        "mobile":"Mobile number",
+        "email":"Email address",
+        "bod":"Your date of birth",
+        "gender":"You identify your gender as",
+        "options":"Options",
+        "button":"Submit"
+    },
+    "opps":{
+        "title":"List of Opportunities"
+    },
+    "roles":{
+        "cardFirst":{
+            "title":"Basic Onboarding Roles",
+            "p1":"Current Status is APPROVED",
+            "p2":"2 Completed tasks",
+            "p3":"0 Started task",
+            "p4":"2 pending tasks",
+            "more":"More detail",
+            "link":">Basic Onboardinf Role"
+        },
+        "cardSecond":{
+            "title":"Basic Roles",
+            "p1":"Current Status is APPROVED",
+            "p2":"3 Completed tasks",
+            "p3":"1 Started task",
+            "p4":"0 pending tasks",
+            "more":"More detail",
+            "link":"Basic Role"
+        }
+    },
+    "events":{
+        "title":"Current Events",
+        "one":"HOSTEL PLACEMENTS",
+        "two":"DOFE REGULAR VOLUNTEERING",
+        "three":"VOLUNTEER MANAGER OPPORTUNITIES",
+        "four":"WORKING PARTIES",
+        "five":"VIRTUAL VOLUNTEERING",
+        "six":"DOFE GOLD RESIDENTIALS",
+        "more":"More detail"
+    },
+    "calendar":{
+        "title":"Calendar",
+        "add":"Add New Event"
+
+    }
+    
+}

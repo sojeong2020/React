@@ -4,14 +4,12 @@ import {Link} from 'react-router-dom'
 import '../styles/opps.css';
 
 
-const Opps = () => {
+const Opps = ({t}) => {
 
    
-   
-
-    return (
+return (
         <div>
-            <h1>List of Opportunities</h1>
+            <h1>{t('opps.title')}</h1>
             <ul >
                 {
                     opps.map(opp => 

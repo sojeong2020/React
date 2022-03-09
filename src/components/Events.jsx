@@ -8,10 +8,10 @@ import volunteer from '../images/volunteer.jpg';
 import work from '../images/work.jpg';
 import { Card, Container, Row, Col} from 'react-bootstrap';
 
-const Events = () => {
+const Events = ({t}) => {
     return (
         <div>
-            <h4>Current Events</h4>
+            <h4>{t('events.title')}</h4>
         <Container className='content'>
         <Row className='card-row'>
         <Col xs={12} md={4}>
@@ -19,7 +19,7 @@ const Events = () => {
         <Card.Body >
         <Card.Img className="card-img" variant="top" src={dog} alt="dog" />
 
-        <Card.Title>HOSTEL PLACEMENTS</Card.Title>
+        <Card.Title>{t('events.one')}</Card.Title>
         <Card.Text  className="card-text">
         <p>Is life a little boring? Fed up of the same old view out of the window?  It’s definitely time to try something new!</p>
 
@@ -32,7 +32,7 @@ const Events = () => {
         </Card.Body>
 
         <Card.Footer className="card-footer">
-        <Card.Link href="/">More details</Card.Link>
+        <Card.Link href="/">{t('events.more')}</Card.Link>
         </Card.Footer>
         </Card>
         </Col>
@@ -42,7 +42,7 @@ const Events = () => {
         <Card.Body>
         <Card.Img className="card-img" variant="top" src={cycling} alt="cycling" />
 
-        <Card.Title>DOFE REGULAR VOLUNTEERING</Card.Title>
+        <Card.Title>{t('events.two')}</Card.Title>
         <Card.Text  className="card-text">
         <p>Is life a little boring? Fed up of the same old view out of the window?  It’s definitely time to try something new!</p>
   
@@ -67,7 +67,7 @@ const Events = () => {
         </Card.Body>
 
         <Card.Footer className="card-footer">
-        <Card.Link href="/">More details</Card.Link>
+        <Card.Link href="/">{t('events.more')}</Card.Link>
         </Card.Footer>  
         </Card>
         </Col>
@@ -77,7 +77,7 @@ const Events = () => {
         <Card.Body>
         <Card.Img className="card-img" variant="top" src={volunteer} alt="volunteer" />
 
-        <Card.Title>VOLUNTEER MANAGER OPPORTUNITIES</Card.Title>
+        <Card.Title>{t('events.three')}</Card.Title>
         <Card.Text  className="card-text">
         <p>Is life a little boring? Fed up of the same old view out of the window?  It’s definitely time to try something new!</p>
       
@@ -94,7 +94,7 @@ const Events = () => {
         </Card.Body>
 
         <Card.Footer className="card-footer">
-        <Card.Link href="/">More details</Card.Link>
+        <Card.Link href="/">{t('events.more')}</Card.Link>
         </Card.Footer> 
         </Card>
         </Col>
@@ -107,7 +107,7 @@ const Events = () => {
         <Card.Body>
         <Card.Img className="card-img" variant="top" src={net} alt="net" />
 
-        <Card.Title>WORKING PARTIES</Card.Title>
+        <Card.Title>{t('events.four')}</Card.Title>
         <Card.Text  className="card-text">
         <p>Is life a little boring? Fed up of the same old view out of the window?  It’s definitely time to try something new!</p>
           
@@ -132,7 +132,7 @@ const Events = () => {
         </Card.Body>
 
         <Card.Footer className="card-footer">
-        <Card.Link href="/">More details</Card.Link>
+        <Card.Link href="/">{t('events.more')}</Card.Link>
         </Card.Footer>  
         </Card>
         </Col>
@@ -142,7 +142,7 @@ const Events = () => {
         <Card.Body >
         <Card.Img className="card-img" variant="top" src={mini} alt="mini" />
 
-        <Card.Title>VIRTUAL VOLUNTEERING</Card.Title>
+        <Card.Title>{t('events.five')}</Card.Title>
         <Card.Text className="card-text">
         <p>Is life a little boring? Fed up of the same old view out of the window?  It’s definitely time to try something new!</p>
 
@@ -161,7 +161,7 @@ const Events = () => {
         </Card.Body>
 
         <Card.Footer className="card-footer">
-        <Card.Link href="/">More details</Card.Link>
+        <Card.Link href="/">{t('events.more')}</Card.Link>
         </Card.Footer>  
         </Card>
         </Col>
@@ -171,7 +171,7 @@ const Events = () => {
         <Card.Body >
         <Card.Img className="card-img" variant="top" src={work} alt="work" />
 
-        <Card.Title>DOFE GOLD RESIDENTIALS</Card.Title>
+        <Card.Title>{t('events.six')}</Card.Title>
         <Card.Text className="card-text">
         <p>Is life a little boring? Fed up of the same old view out of the window?  It’s definitely time to try something new!</p>
   
@@ -185,7 +185,7 @@ const Events = () => {
         </Card.Body>
 
         <Card.Footer className="card-footer">
-        <Card.Link href="/">More details</Card.Link>
+        <Card.Link href="/">{t('events.more')}</Card.Link>
         </Card.Footer> 
         </Card>
         </Col>    
