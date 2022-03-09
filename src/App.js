@@ -6,9 +6,10 @@ import SideBar from './components/SideBar';
 import Home from './components/Home';
 import Profile from './components/Profile';
 import Opps from './components/Opps';
+import OppDetail from './components/OppDetail';
 import Roles from './components/Roles';
 import Events from './components/Events';
-import Calendar from  './components/Calendar';
+import BigCalendar from  './components/BigCalendar';
 import Footer from './components/Footer';
 
 import {useState} from 'react';
@@ -30,7 +31,7 @@ function App() {
     <>
    <Navbar bg="light" expand="lg">
   <Container fluid>
-    <Navbar.Brand href="#">My App</Navbar.Brand>
+    <Navbar.Brand href="/">React App</Navbar.Brand>
     <Navbar.Toggle aria-controls="navbarScroll" />
     <Navbar.Collapse id="navbarScroll">
       <Nav
@@ -70,9 +71,10 @@ function App() {
       <Route exact path="/" element={<Home />} />
       <Route exact path="/profile" element={<Profile />} />
       <Route exact path="/opps" element={<Opps />} />
+      <Route exact path="/opp/:id" element={<OppDetail />} />
       <Route exact path="/roles" element={<Roles />} />
       <Route exact path="/events" element={<Events />} />
-      <Route exact path="/calendar" element={<Calendar />} />
+      <Route exact path="/calendar" element={<BigCalendar />} />
     </Routes> 
   </div>
   </div>   

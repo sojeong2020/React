@@ -1,0 +1,11 @@
+.big-calendar {
+    text-align: center;
+}
+
+.add-event {
+    
+    margin:30px 50px 60px;
+}
+.add-event input {
+    padding: 7px;
+}
