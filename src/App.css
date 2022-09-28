@@ -25,7 +25,9 @@ body{
   
   /* --------------------NavBar---------------------------- */
   
- 
+ .navbartop{
+    background-color: rgb(157, 150, 164);
+ }
   .lan-button{
       margin-right: 100px;
       

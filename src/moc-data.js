@@ -1,4 +1,4 @@
-export const opps = [
+export const data = [
     {id:11, name: 'Picking apples', description:'Come and join picking apples!'},
     {id:12, name: 'Picking cherries', description:'Come and join picking cherries!'},
     {id:13, name: 'Picking tomatoes', description:'Come and join picking tomatoes!'},

@@ -21,7 +21,8 @@ const Profile = ({t}) => {
 
     function submitForm(e) {
         e.preventDefault()
-        console.log("all data from form", firstname,surname,mobile,email,date,gender)
+        const profile={firstname,surname,mobile,email,date,gender}
+        console.log("all data from form", profile)
 
         firstname.match(/^[A-Za-z]{2,16}$/)? setFirstnameMsg("Looks good!"):setFirstnameMsg("Firstname should be 2-16 characters and shouldn't include any special character!")
         surname.match(/^[A-Za-z]{2,16}$/)? setSurnameMsg("Looks good!"):setSurnameMsg("Surname should be 2-16 characters and shouldn't include any special character!")
@@ -39,39 +40,39 @@ const Profile = ({t}) => {
                 <h4>{t('profile.title')}</h4>
             <Row>
                 <Col  xs={12} md={6}>
-                <label>{t('profile.name')}</label><br></br>
-                <input type="text" placeholder={t('profile.name')} onChange={(e) => setFirstname(e.target.value)} required/> <br></br>
+                <label htmlFor="firstname">{t('profile.name')}</label><br></br>
+                <input id="firstname" aria-label='firstname' aria-required="true" type="text" placeholder={t('profile.name')} onChange={(e) => setFirstname(e.target.value)} value={firstname} required/> <br></br>
                 <span className='form-span'>{firstnameMsg}</span> <br></br>
                 </Col>
 
                 <Col xs={12} md={6}>
-                <label>{t('profile.surname')}</label><br></br>
-                <input type="text" placeholder={t('profile.surname')} onChange={(e) => setSurname(e.target.value)}  required /> <br></br>
+                <label htmlFor="surname">{t('profile.surname')}</label><br></br>
+                <input  id="surname" aria-label='surname' aria-required="true" type="text" placeholder={t('profile.surname')} onChange={(e) => setSurname(e.target.value)} value={surname} required /> <br></br>
                 <span className='form-span'>{surnameMsg}</span> <br></br>
                 </Col>
             </Row>
 
             <Row>
                 <Col  xs={12} md={6}>
-                <label>{t('profile.mobile')}</label><br></br>
-                <input type="text" placeholder={t('profile.mobile')} onChange={(e) => setMobile(e.target.value)}  required /> <br></br>
+                <label htmlFor="mobile">{t('profile.mobile')}</label><br></br>
+                <input  id="mobile" aria-label='mobile' aria-required="true" type="text" placeholder={t('profile.mobile')} onChange={(e) => setMobile(e.target.value)} value={mobile}  required /> <br></br>
                 <span className='form-span'>{mobileMsg}</span> <br></br>
                 </Col>
                 <Col  xs={12} md={6}>
-                <label>{t('profile.email')}</label><br></br>
-                <input type="text" placeholder={t('profile.email')} onChange={(e) => setEmail(e.target.value)}  required /> <br></br>
+                <label  htmlFor="email">{t('profile.email')}</label><br></br>
+                <input id="email" aria-label='email' aria-required="true" type="text" placeholder={t('profile.email')} onChange={(e) => setEmail(e.target.value)} value={email} required /> <br></br>
                 <span className='form-span'>{emailMsg}</span> <br></br>
                 </Col>
             </Row>
 
             <Row>
                  <Col  xs={12} md={6}>
-                <label>{t('profile.bod')}</label><br></br>
-                <input type="date" placeholder="Date" onChange={(e) => setDate(e.target.value)} required/> <br></br>
+                <label  htmlFor="date">{t('profile.bod')}</label><br></br>
+                <input id="date" aria-label='date' aria-required="true" type="date" placeholder="Date" onChange={(e) => setDate(e.target.value)} value={date} required/> <br></br>
                  </Col>
                  <Col  xs={12} md={6}>
-                <label>{t('profile.gender')}</label><br></br>
-                <select onChange={(e) => setGender(e.target.value)} required>
+                <label  htmlFor="gender">{t('profile.gender')}</label><br></br>
+                <select id="gender" aria-label='gender' aria-required="true" onChange={(e) => setGender(e.target.value)} value={gender} required>
                     <option value="">{t('profile.options')}</option>
                     <option value="male">Male</option>
                     <option value="female">Female</option>
@@ -80,7 +81,7 @@ const Profile = ({t}) => {
                 </select><br></br>
                 </Col>
             </Row>
-                <button type="submit">{t('profile.button')}</button>
+                <button aria-label="Submit" type="submit">{t('profile.button')}</button>
              </form>
             </div>
             </Container>

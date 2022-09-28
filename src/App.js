@@ -35,18 +35,20 @@ function App() {
 
   return (
     <>
-   <Navbar bg="light" expand="lg">
+    <div className="navbartop">
+   <Navbar   expand="lg">
   <Container fluid>
     <Navbar.Brand href="/">{t('navbar.logo')}</Navbar.Brand>
     <Navbar.Toggle aria-controls="navbarScroll" />
     <Navbar.Collapse id="navbarScroll">
       <Nav
+        aria-labelledby="mainmenulabel"
         className="ms-auto my-2 my-lg-0"
         style={{ maxHeight: '100px' }}
         navbarScroll
       >
         <Nav.Link href="/">{t('navbar.home')}</Nav.Link>
-        <Nav.Link href="https://teamkinetic.co.uk/about-teamkinetic">{t('navbar.about')}</Nav.Link>
+        <Nav.Link href="https://google.com">{t('navbar.about')}</Nav.Link>
 
         <div className="lan-button">
 
@@ -67,7 +69,8 @@ function App() {
     </Navbar.Collapse>
   </Container>
 </Navbar>
-   
+</div>  
+
   <div className="content-div">   
   <SideBar t={t} />
 

@@ -10,7 +10,7 @@ const Home = ({t}) => {
          <Alert variant="warning" className='text-center'>
          <Alert.Heading>{t('home.subtitle')}</Alert.Heading>
          <p>{t('home.title')} </p>
-         <a href="https://training10.teamkinetic.co.uk/vk/admin/" class="alert-link">{t('home.link')}</a>
+         <a href="https://google.com" class="alert-link">{t('home.link')}</a>
          </Alert>
          
         </div>
